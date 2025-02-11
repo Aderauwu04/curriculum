@@ -1,0 +1,15 @@
+.bg-surface {
+  background-color: var(--surface-color);
+}
+.text-center {
+  text-align: center;
+}
+.font-light {
+  font-weight: lighter;
+}
+.font-small {
+  font-size: 1.5rem;
+}
+.font-medium {
+  font-size: 2rem;
+}

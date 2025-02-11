@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #6B2F87;
+  --secondary-color: #D0BBDA;
+  --accent-color: #b464f6;
+
+  --background-color: #D0BBDA;
+  --text-color: #191919;
+  --surface-color: #f8f9fa;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --hover-color: #2e2e2e;
+
+  --primary-button-background: var(--accent-color);
+  --primary-button-text-color: var(--background-color);
+  --secondary-button-background: var(--secondary-color);
+  --secondary-button-text-color: var(--text-color);
+  --input-background: var(--secondary-color);
+  --input-text-color: var(--text-color);
+  --border-color: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #D1C4E9;        /* Lavanda claro, aún vibrante pero más suave en oscuro */
+    --secondary-color: #673AB7;      /* Morado más oscuro y profundo */
+    --accent-color: #9575CD;         /* Morado medio, como acento */
+
+    --background-color: #210c25;     /* Morado muy oscuro, casi berenjena para el fondo */
+    --text-color: #f8f0fb;          /* Lila muy claro, casi blanco para el texto */
+    --surface-color: #3f3441;        /* Morado oscuro para superficies */
+    --success-color: #81C784;        /* Verde éxito, ajustado para fondo morado */
+    --info-color: #64B5F6;           /* Azul info, ajustado para fondo morado */
+    --warning-color: #FFD54F;        /* Amarillo warning, ajustado para fondo morado */
+    --danger-color: #E57373;         /* Rojo danger, ajustado para fondo morado */
+    --light-color: #332436;          /* Morado aún más oscuro, reemplaza el light de light mode */
+    --dark-color: #9E9E9E;           /* Gris medio para elementos oscuros en modo oscuro (puede ser ajustado a morado si se prefiere) */
+    --hover-color: #5E35B1;          /* Morado oscuro para hover */
+
+    /* Colores específicos para elementos (adaptados para Dark Mode Morado) */
+    --primary-button-background: var(--accent-color); /* Usa el acento para botones primarios */
+    --primary-button-text-color: var(--text-color); /* Texto claro en botones primarios */
+    --secondary-button-background: var(--secondary-color); /* Usa el secundario para botones secundarios */
+    --secondary-button-text-color: var(--text-color); /* Texto claro en botones secundarios */
+    --input-background: var(--light-color);       /* Fondo morado oscuro para inputs */
+    --input-text-color: var(--text-color);            /* Texto claro para inputs */
+    --border-color: #7E57C2;
+  }
+}
