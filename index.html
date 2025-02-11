@@ -5,40 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrea Rebeca</title>
   <link rel="stylesheet" href="./src/assets/index.css">
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("dKQ4grVxHEdP2hGoy"); // Reemplaza con tu User ID
-    })();
-    // document.getElementById('contact-form').addEventListener('submit', function(event) {
-    //   event.preventDefault();
-    //   emailjs.sendForm('service_8u1lnps', 'template_haf8um8', this)
-    //     .then(function() {
-    //       alert('Correo enviado exitosamente!');
-    //     }, function(error) {
-    //       alert('Error al enviar el correo: ' + JSON.stringify(error));
-    //     });
-    // });
-    const btn = document.getElementById('button');
-    document.getElementById('contact-form')
-    .addEventListener('submit', function(event) {
-      event.preventDefault();
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-      btn.value = 'Enviando...';
-
-      const serviceID = 'service_8u1lnps';
-      const templateID = 'template_haf8um8';
-
-      emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          btn.value = 'Enviar';
-          alert('Enviado!');
-        }, (err) => {
-          btn.value = 'Enviar';
-          alert(JSON.stringify(err));
-        });
-    });
+  <script type="text/javascript">
+    emailjs.init('dKQ4grVxHEdP2hGoy')
   </script>
+
 </head>
 <body>
   <header class="header">
@@ -261,11 +233,30 @@
               <label for="message">Mensaje</label>
               <textarea name="message" id="message" required></textarea>
             </div>
-            <button type="submit" class="btn" id="btn">Enviar</button>
+            <button type="submit" class="btn" id="btnForm">Enviar</button>
           </form>
         </div>
       </div>
     </div>
   </footer>
+  <script>
+    const btn = document.getElementById('btnForm');
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      btn.value = 'Enviando...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_haf8um8';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Enviar';
+          alert('El mensaje ha sido enviado');
+        }, (err) => {
+          btn.value = 'Enviar';
+          alert(JSON.stringify(err));
+        });
+    });
+  </script>
 </body>
 </html>
